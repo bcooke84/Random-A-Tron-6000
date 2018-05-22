@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Random-A-Tron 6000</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+
+<body>
+
+<h1 class="rainbow"> RANDOM-A-TRON 6000</h1>
+
+#parse($template)
+
+    <form class="button_box" action="/randomatron" method="post" autocomplete="off">
+        <input class="add_button" type="text" placeholder="Add name...">
+        <input class="button" type="submit" value="Add Name">
+    </form>
+
+    <form class="button_box" action="/randomatron/delete" method="post" autocomplete="off">
+        <input class="add_button" type="text" placeholder="Remove name...">
+        <input class="button" type="submit" value="Remove Name">
+    </form>
+
+    <form class="button_box" action="/one" method="get">
+        <input class="button" type="submit" value="Random Name">
+    </form>
+    <form class="button_box" action="/two" method="get">
+        <input class="button" type="submit" value="Random Pair">
+    </form>
+
+
+
+</body>
+</html>

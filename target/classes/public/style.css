@@ -1,0 +1,70 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.names {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.individual_names {
+  text-align: center;
+  display: inline-block;
+  width: 85px;
+  border: solid 1px black;
+}
+
+input.button {
+  background-color: red;
+  color: white;
+  width: auto;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input.button:hover {
+  background-color: lightred;
+  color: black;
+}
+
+form.button_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: auto;
+  height: 50px;
+}
+
+.button-group {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+h1.rainbow {
+  -webkit-animation: rainbow 2s infinite;
+}
+
+@-webkit-keyframes rainbow{
+  10%{color: #ff6633;}
+  20%{colour: #ff9933;}
+  30%{colour: #ffff33;}
+  40%{color: #99ff33;}
+  50%{color: #99ff33;}
+  60%{color: 	#3399ff;}
+  70%{color: #9933ff;}
+  80%{color: #ff33ff;}
+  90%{color: #ff3399;}
+  100%{color: #ff3333;}
+}
+
+h1.pair {
+  display: inline;
+  padding-top: 30px;
+  padding-right: 20px;
+}
