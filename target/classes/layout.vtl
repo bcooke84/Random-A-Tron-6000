@@ -11,12 +11,12 @@
 #parse($template)
 
     <form class="button_box" action="/randomatron" method="post" autocomplete="off">
-        <input class="add_button" type="text" placeholder="Add name...">
+        <input class="add_button" type="text" placeholder="Add name..." name="name">
         <input class="button" type="submit" value="Add Name">
     </form>
 
     <form class="button_box" action="/randomatron/delete" method="post" autocomplete="off">
-        <input class="add_button" type="text" placeholder="Remove name...">
+        <input class="add_button" type="text" placeholder="Remove name..." name="name">
         <input class="button" type="submit" value="Remove Name">
     </form>
 

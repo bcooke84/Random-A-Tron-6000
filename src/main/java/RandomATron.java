@@ -35,7 +35,8 @@ public class RandomATron {
     }
 
     public void removeStudent(String name) {
-        this.students.remove(name);
+        if (students.contains(name)) {
+        this.students.remove(name);}
     }
 
     public void updateName(String name, String newName) {
