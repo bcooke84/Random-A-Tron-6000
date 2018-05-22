@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: white;
+  font-family: arial;
 }
 
 .names {
@@ -39,10 +40,8 @@ form.button_box {
   height: 50px;
 }
 
-.button-group {
+.button_container {
   padding-top: 30px;
-  display: flex;
-  flex-direction: row;
 }
 
 
