@@ -4,6 +4,8 @@ body {
  font-family: 'Bangers', cursive;
  }
 
+/* NAME DISPLAY */
+
 .names {
   display: flex;
   flex-direction: row;
@@ -22,43 +24,6 @@ body {
   padding-right: 35px;
 }
 
-input.button {
-  background-color: red;
-  color: white;
-  width: auto;
-  text-align: center;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-input.button:hover {
-  background-color: lightred;
-  color: black;
-}
-
-form.button_box {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: auto;
-  height: 50px;
-}
-
-.button_container {
-  padding-top: 30px;
- display: flex;
- justify-content: center;
- align-content: center;
-}
-
-
-.random-names {
- display: flex;
- justify-content: center;
- align-content: center;
-}
-
-
 p.rainbow {
   -webkit-animation: rainbow 0.5s infinite;
    display: flex;
@@ -66,6 +31,8 @@ p.rainbow {
    align-content: center;
    font-size: 72px;
    padding-top: 25px;
+   margin: 0px;
+   text-decoration: none;
 }
 
 @-webkit-keyframes rainbow{
@@ -75,8 +42,69 @@ p.rainbow {
   100%{colour: #ffffff;}
 }
 
-h1.pair {
+a.rainbow-link {
+  text-decoration: none;
+}
+
+.random-name {
   display: inline;
+  font-size: 60px;
+}
+
+.random-names {
+ display: flex;
+ justify-content: center;
+ align-content: center;
+}
+
+
+/* BUTTONS  */
+
+input.button {
+  color: white;
+  width: auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+input.button:hover {
+  background-color: lightred;
+  color: black;
+}
+
+form.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: auto;
+  height: 50px;
+}
+
+.random-button-container {
   padding-top: 30px;
-  padding-right: 20px;
+ display: flex;
+ justify-content: space-evenly;
+ align-content: center;
+ padding-left: 50px;
+ padding-right: 50px;
+}
+
+
+input[type=submit]{
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+}
+
+input[type=text]{
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+#random-name-button, #random-pair-button {
+  background-color: green;
+}
+
+#reset-button {
+  background-color: red;
 }

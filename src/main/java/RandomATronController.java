@@ -31,7 +31,8 @@ public class RandomATronController {
         get("/one", (req, res) -> {
             HashMap<String, Object> model = new HashMap<>();
             model.put("singleName", randomATron.randomName());
-            model.put("template", "one.vtl");
+            model.put("nameSingle", "one.vtl");
+            model.put("students", randomATron.getStudents());
             return new ModelAndView(model, "layout.vtl");
         }, velocityTemplateEngine);
 
@@ -39,7 +40,8 @@ public class RandomATronController {
         get("/two", (req, res) -> {
             HashMap<String, Object> model = new HashMap<>();
             model.put("pair", randomATron.randomPair());
-            model.put("template", "two.vtl");
+            model.put("namePair", "two.vtl");
+            model.put("students", randomATron.getStudents());
             return new ModelAndView(model, "layout.vtl");
         }, velocityTemplateEngine);
 
@@ -54,6 +56,12 @@ public class RandomATronController {
         post("/randomatron/delete", (req, res) -> {
             String name = req.queryParams("name");
             randomATron.removeStudent(name);
+            res.redirect("/randomatron");
+            return "";
+        });
+
+        post("/randomatron/reset", (req, res) -> {
+            randomATron.refill();
             res.redirect("/randomatron");
             return "";
         });

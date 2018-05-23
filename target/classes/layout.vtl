@@ -8,36 +8,59 @@
 <body>
 
 <div class="heading">
-    <p class="rainbow"> RANDOM-A-TRON 6000 </p>
+    <a class="rainbow-link" href="/randomatron"><p class="rainbow">RANDOM-A-TRON 6000</p></a>
 </div>
 
+#parse($namePair)
+#parse($nameSingle)
 #parse($template)
 
-<div class="button_container">
+<div class="names">
+    #foreach($name in $students)
+    <div class="individual_names">
+        <p>$name.toUpperCase()</p>
+    </div>
+    #end
+</div>
+
+
+
+
+
+<div class="random-button-container">
+
     <div>
-        <form class="button_box" action="/randomatron" method="post" autocomplete="off">
+        <form class="button-box" action="/randomatron" method="post" autocomplete="off">
             <input class="add_button" type="text" placeholder="Add name..." name="name">
         </form>
     </div>
 
     <div>
-        <form class="button_box" action="/randomatron/delete" method="post" autocomplete="off">
+        <form class="button-box" action="/randomatron/delete" method="post" autocomplete="off">
             <input class="add_button" type="text" placeholder="Remove name..." name="name">
         </form>
     </div>
 
     <div>
-        <form class="button_box" action="/one" method="get">
-            <input class="button" type="submit" value="Random Name">
+        <form class="button-box" action="/one" method="get">
+            <input class="button" type="submit" id="random-name-button" value="Random Name">
         </form>
     </div>
+
     <div>
-        <form class="button_box" action="/two" method="get">
-            <input class="button" type="submit" value="Random Pair">
+        <form class="button-box" action="/two" method="get">
+            <input class="button" type="submit" id="random-pair-button" value="Random Pair">
+        </form>
+    </div>
+
+    <div>
+        <form class="button-box" action="/randomatron/reset" method="post">
+            <input class="button" type="submit" id="reset-button" value="Reset Names">
         </form>
     </div>
 
 </div>
+
 
 
 </body>
