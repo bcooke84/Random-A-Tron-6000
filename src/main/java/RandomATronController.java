@@ -17,10 +17,7 @@ public class RandomATronController {
         VelocityTemplateEngine velocityTemplateEngine = new VelocityTemplateEngine();
         staticFileLocation("/public");
 
-        ArrayList<String> students = new ArrayList<>();
-        Collections.addAll(students, "Paul", "Andrew", "Patrick", "Daniel", "Sarah", "Kelsie", "Liam", "Ed", "Scott", "Lyle", "Stuart", "Connor", "Fraser", "Callum", "Chris", "Ruaridh", "Nikhil", "Roberto", "Brian");
-
-        RandomATron randomATron = new RandomATron(students);
+        RandomATron randomATron = new RandomATron();
 
 
         get("/randomatron", (req, res) -> {

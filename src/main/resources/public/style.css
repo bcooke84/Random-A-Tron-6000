@@ -1,14 +1,17 @@
 body {
   background-color: black;
   color: white;
-  font-family: arial;
-}
+ font-family: 'Bangers', cursive;
+ }
+
+/* NAME DISPLAY */
 
 .names {
   display: flex;
   flex-direction: row;
-  padding: 5px;
   flex-wrap: wrap;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 .individual_names {
@@ -16,7 +19,41 @@ body {
   display: inline-block;
   width: 85px;
   border: solid 1px black;
+  font-size:  25px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
+
+p.rainbow {
+  -webkit-animation: rainbow 0.5s infinite;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   font-size: 72px;
+   padding-top: 25px;
+}
+
+@-webkit-keyframes rainbow{
+  25%{color: #00ff00;}
+  50%{colour: #ffffff;}
+  75%{color: #ff0000;}
+  100%{colour: #ffffff;}
+}
+
+h1.pair {
+  display: inline;
+  padding-top: 30px;
+  padding-right: 20px;
+}
+
+.random-names {
+ display: flex;
+ justify-content: center;
+ align-content: center;
+}
+
+
+/* BUTTONS  */
 
 input.button {
   background-color: red;
@@ -42,28 +79,7 @@ form.button_box {
 
 .button_container {
   padding-top: 30px;
-}
-
-
-h1.rainbow {
-  -webkit-animation: rainbow 2s infinite;
-}
-
-@-webkit-keyframes rainbow{
-  10%{color: #ff6633;}
-  20%{colour: #ff9933;}
-  30%{colour: #ffff33;}
-  40%{color: #99ff33;}
-  50%{color: #99ff33;}
-  60%{color: #3399ff;}
-  70%{color: #9933ff;}
-  80%{color: #ff33ff;}
-  90%{color: #ff3399;}
-  100%{color: #ff3333;}
-}
-
-h1.pair {
-  display: inline;
-  padding-top: 30px;
-  padding-right: 20px;
+ display: flex;
+ justify-content: center;
+ align-content: center;
 }

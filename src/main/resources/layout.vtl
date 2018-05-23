@@ -2,35 +2,44 @@
 <head>
     <title>Random-A-Tron 6000</title>
     <link rel="stylesheet" href="/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Luckiest+Guy" rel="stylesheet">
 </head>
 
 <body>
 
-<h1 class="rainbow"> RANDOM-A-TRON 6000</h1>
+<div class="heading">
+    <p class="rainbow"> RANDOM-A-TRON 6000 </p>
+</div>
+
+
 
 #parse($template)
 
-<div class = "button_container">
+<div class="button_container">
+    <div>
+        <form class="button_box" action="/randomatron" method="post" autocomplete="off">
+            <input class="add_button" type="text" placeholder="Add name..." name="name">
+        </form>
+    </div>
 
-    <form class="button_box" action="/randomatron" method="post" autocomplete="off">
-        <input class="add_button" type="text" placeholder="Add name..." name="name">
-        <input class="button" type="submit" value="Add Name">
-    </form>
+    <div>
+        <form class="button_box" action="/randomatron/delete" method="post" autocomplete="off">
+            <input class="add_button" type="text" placeholder="Remove name..." name="name">
+        </form>
+    </div>
 
-    <form class="button_box" action="/randomatron/delete" method="post" autocomplete="off">
-        <input class="add_button" type="text" placeholder="Remove name..." name="name">
-        <input class="button" type="submit" value="Remove Name">
-    </form>
-
-    <form class="button_box" action="/one" method="get">
-        <input class="button" type="submit" value="Random Name">
-    </form>
-    <form class="button_box" action="/two" method="get">
-        <input class="button" type="submit" value="Random Pair">
-    </form>
+    <div>
+        <form class="button_box" action="/one" method="get">
+            <input class="button" type="submit" value="Random Name">
+        </form>
+    </div>
+    <div>
+        <form class="button_box" action="/two" method="get">
+            <input class="button" type="submit" value="Random Pair">
+        </form>
+    </div>
 
 </div>
-
 
 
 </body>

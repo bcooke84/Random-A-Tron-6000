@@ -5,8 +5,10 @@ public class RandomATron {
 
     private ArrayList<String> students;
 
-    public RandomATron(ArrayList<String> students) {
-        this.students = students;
+    public RandomATron() {
+        students = new ArrayList<>();
+        Collections.addAll(students, "PAUL", "ANDREW", "PATRICK", "DANIEL", "SARAH", "KELSIE", "LIAM", "ED", "SCOTT", "LYLE", "STUART", "CONNOR", "FRASER", "CALLUM", "CHRIS", "RUARIDH", "NIKHIL", "ROBERTO", "BRIAN");
+        Collections.sort(students);
     }
 
     public ArrayList<String> getStudents() {
@@ -31,11 +33,11 @@ public class RandomATron {
     }
 
     public void addStudent(String name) {
-        this.students.add(name);
+        this.students.add(name.toUpperCase());
     }
 
     public void removeStudent(String name) {
-        if (students.contains(name)) {
+        if (students.contains(name.toUpperCase())) {
         this.students.remove(name);}
     }
 
