@@ -48,14 +48,14 @@ public class RandomATronController {
 
         post("/randomatron", (req, res) -> {
             String name = req.queryParams("name");
-            randomATron.addStudent(name);
+            randomATron.addStudent(name.toUpperCase());
             res.redirect("/randomatron");
             return "";
         });
 
         post("/randomatron/delete", (req, res) -> {
             String name = req.queryParams("name");
-            randomATron.removeStudent(name);
+            randomATron.removeStudent(name.toUpperCase());
             res.redirect("/randomatron");
             return "";
         });
@@ -67,9 +67,6 @@ public class RandomATronController {
         });
 
     }
-
-
-
 
 
 }

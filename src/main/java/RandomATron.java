@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 public class RandomATron {
 
     private ArrayList<String> students;
-    private ArrayList<String> selectedStudents;
+    private HashMap selectedStudents;
 
     public RandomATron() {
         students = new ArrayList<>();
         Collections.addAll(students, "PAUL", "ANDREW", "DANIEL", "SARAH", "KELSIE", "LIAM", "ED", "SCOTT", "LYLE", "STUART", "CONNOR", "FRASER", "CALLUM", "CHRIS", "RUARIDH", "NIKHIL", "ROBERTO", "BRIAN");
         Collections.sort(students);
-        selectedStudents = new ArrayList<>();
+        selectedStudents = new HashMap<>();
     }
 
     public ArrayList<String> getStudents() {
@@ -38,7 +39,7 @@ public class RandomATron {
         randomPair.add(students.get(1));
         students.remove(1);
         students.remove(0);
-        selectedStudents.addAll(randomPair);
+        selectedStudents.put(randomPair.get(0), randomPair.get(1));
         Collections.sort(students);
 //        }
 //        else if(students.size() == 1) {
@@ -48,12 +49,13 @@ public class RandomATron {
     }
 
     public void addStudent(String name) {
-        this.students.add(name.toUpperCase());
+        this.students.add(name);
     }
 
     public void removeStudent(String name) {
-        if (students.contains(name.toUpperCase())) {
-        this.students.remove(name);}
+        if (students.contains(name)) {
+            this.students.remove(name);
+        }
     }
 
     public void updateName(String name, String newName) {
@@ -65,6 +67,7 @@ public class RandomATron {
         students.clear();
         selectedStudents.clear();
         Collections.addAll(students, "PAUL", "ANDREW", "DANIEL", "SARAH", "KELSIE", "LIAM", "ED", "SCOTT", "LYLE", "STUART", "CONNOR", "FRASER", "CALLUM", "CHRIS", "RUARIDH", "NIKHIL", "ROBERTO", "BRIAN");
+        Collections.sort(students);
     }
 
 }
